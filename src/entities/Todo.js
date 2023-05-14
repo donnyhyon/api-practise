@@ -1,4 +1,4 @@
-export class Todo {
+class Todo {
   static counter = 0;
   constructor(title, completed) {
     this.id = ++Todo.counter;
@@ -6,3 +6,5 @@ export class Todo {
     this.completed = completed;
   }
 }
+
+export { Todo };
