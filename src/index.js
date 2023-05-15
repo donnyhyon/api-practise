@@ -1,11 +1,10 @@
 const express = require("express");
 const Todo = require("./entities/Todo"); //import is broken?  when running npm run dev
-
+const TodoRepository = require("./todoRepository");
 const app = express();
 const port = 3000;
 app.use(express.json());
 
-let todos = [];
 // class Todo {
 //   static counter = 0;
 //   constructor(title, completed) {
