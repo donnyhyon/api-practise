@@ -7,4 +7,4 @@ class Todo {
   }
 }
 
-export default  { Todo };
+module.exports = Todo;

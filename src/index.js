@@ -1,5 +1,5 @@
-import express from "express";
-import Todo from "./entities/Todo"; //import is broken?  when running npm run dev
+const express = require("express");
+const Todo = require("./entities/Todo"); //import is broken?  when running npm run dev
 
 const app = express();
 const port = 3000;
@@ -30,4 +30,4 @@ app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });
 
-export { app };
+module.exports = app;

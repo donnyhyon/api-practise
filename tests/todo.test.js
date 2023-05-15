@@ -1,6 +1,6 @@
-import request from "supertest";
-import { app } from "../src";
-import { Todo } from "../src/entities/Todo";
+const request = require("supertest");
+const app = require("../src");
+const Todo = require("../src/entities/Todo");
 
 describe("POST /todos", () => {
   it("should create a new todo item", async () => {
@@ -16,7 +16,7 @@ describe("POST /todos", () => {
 });
 
 describe("GET /todos", () => {
-  let todos = []; //where is best place to put this? 
+  let todos = []; //where is best place to put this?
   Todo.counter = 0;
   it("should retrieve all todo items", async () => {
     todos.push(new Todo("create api", false));
