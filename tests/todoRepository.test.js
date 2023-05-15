@@ -1,4 +1,4 @@
-const TodoRepository = require("../src/todoRepository");
+const TodoRepository = require("../src/Repository/todoRepository");
 const Todo = require("../src/entities/Todo");
 
 describe("Todo repo tests", () => {
