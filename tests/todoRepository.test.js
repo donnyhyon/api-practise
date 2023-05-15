@@ -23,7 +23,6 @@ describe("Todo repo tests", () => {
     const todoRepo = new TodoRepository();
     todoRepo.createTodo("first todo", false);
     todoRepo.createTodo("second todo", false);
-    console.log(todoRepo.getAllTodos());
     const result = todoRepo.getByID(2);
     expect(result.title).toEqual("second todo");
   });

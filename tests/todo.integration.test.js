@@ -25,7 +25,6 @@ describe("GET /todos", () => {
     todos.push(new Todo("complete api", false));
 
     const response = await request(app).get("/todos");
-    console.log(response.body);
     expect(response.status).toBe(201);
     expect(response.body).toBe(4);
   });
