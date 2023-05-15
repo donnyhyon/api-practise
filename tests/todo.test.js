@@ -15,9 +15,26 @@ describe("POST /todos", () => {
   });
 });
 
+describe("GET /todos", () => {
+  let todos = []; //where is best place to put this? 
+  Todo.counter = 0;
+  it("should retrieve all todo items", async () => {
+    todos.push(new Todo("create api", false));
+    todos.push(new Todo("practise api", false));
+    todos.push(new Todo("refactor api", false));
+    todos.push(new Todo("complete api", false));
+
+    const response = await request(app).get("/todos");
+    console.log(response.body);
+    expect(response.status).toBe(201);
+    expect(response.body).toBe(4);
+  });
+});
+
 describe("Todo tests", () => {
   it("should instatniate todo", () => {
+    Todo.counter = 0;
     const newTodo = new Todo();
-    expect(newTodo.id).toBe(2);
+    expect(newTodo.id).toBe(1);
   });
 });

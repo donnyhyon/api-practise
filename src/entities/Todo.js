@@ -7,4 +7,4 @@ class Todo {
   }
 }
 
-export { Todo };
+export default  { Todo };
